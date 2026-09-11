@@ -1,13 +1,23 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+public class Main {
+    public static void main(String[] args) {
+        SkincareDirector director = new SkincareDirector();
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+        SkincareObjectBuilder objectBuilder = new SkincareObjectBuilder();
+        director.makeMorningRoutine(objectBuilder);
+
+        SkincareRoutine morningRoutine = objectBuilder.getResult();
+
+        System.out.println("MORNING ROUTINE: ");
+        System.out.println(morningRoutine);
+
+        System.out.println();
+
+        SkincareGuideBuilder guideBuilder = new SkincareGuideBuilder();
+        director.makeEveningRoutine(guideBuilder);
+
+        String eveningGuide = guideBuilder.getResult();
+
+        System.out.println("EVENING GUIDE: ");
+        System.out.println(eveningGuide);
     }
 }

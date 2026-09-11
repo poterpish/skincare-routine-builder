@@ -15,7 +15,7 @@ public class SkincareRoutine {
     public String toString() {
         return "SkincareRoutine{" +
                 "cleanser='" + cleanser + '\'' +
-                ", serum='" + toner + '\'' +
+                ", toner='" + toner + '\'' +
                 ", moisturizer='" + moisturizer + '\'' +
                 ", sunscreen='" + sunscreen + '\'' +
                 '}';
